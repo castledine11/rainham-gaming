@@ -381,6 +381,7 @@ h3 {
 .cause-card,
 .venue-card,
 .contact-card,
+.charity-card,
 .games-grid article,
 details {
   background: #fff;
@@ -398,6 +399,7 @@ details {
 .cause-card p,
 .venue-card p,
 .contact-card p,
+.charity-card p,
 .games-grid p,
 .faq-list p {
   color: var(--muted);
@@ -417,15 +419,26 @@ details {
   text-transform: uppercase;
 }
 
-.red-card { background: #fff0f0; }
-.green-card { background: #effff4; }
-.blue-card { background: #eef5ff; }
-.yellow-card { background: #fff6da; }
+.red-card {
+  background: #fff0f0;
+}
+
+.green-card {
+  background: #effff4;
+}
+
+.blue-card {
+  background: #eef5ff;
+}
+
+.yellow-card {
+  background: #fff6da;
+}
 
 .section-ink {
   color: #fff;
   background:
-    linear-gradient(135deg, rgba(93,20,159,0.92), rgba(9,9,9,0.98)),
+    linear-gradient(135deg, rgba(93, 20, 159, 0.92), rgba(9, 9, 9, 0.98)),
     var(--ink);
 }
 
@@ -457,9 +470,17 @@ details {
   transform: rotate(-1deg) scale(1.02);
 }
 
-.games-grid article:nth-child(3n + 1) { background: #fff0f0; }
-.games-grid article:nth-child(3n + 2) { background: #f1e8ff; }
-.games-grid article:nth-child(3n + 3) { background: #eaf2ff; }
+.games-grid article:nth-child(3n + 1) {
+  background: #fff0f0;
+}
+
+.games-grid article:nth-child(3n + 2) {
+  background: #f1e8ff;
+}
+
+.games-grid article:nth-child(3n + 3) {
+  background: #eaf2ff;
+}
 
 .games-grid h3 {
   font-size: 1.45rem;
@@ -507,9 +528,9 @@ details {
 .cause-card {
   padding: 1.5rem;
   background:
-    radial-gradient(circle at 85% 15%, rgba(255,180,0,0.45), transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(255, 180, 0, 0.45), transparent 25%),
     #fff;
-  transform: rotate(-1deg);
+  /* transform: rotate(-1deg); */
 }
 
 .cause-card h3 {
@@ -518,20 +539,37 @@ details {
 
 .section-spray {
   background:
-    radial-gradient(circle at 15% 20%, rgba(255,180,0,0.22), transparent 11rem),
-    radial-gradient(circle at 90% 75%, rgba(7,89,233,0.18), transparent 12rem),
+    radial-gradient(circle at 15% 20%, rgba(255, 180, 0, 0.22), transparent 11rem),
+    radial-gradient(circle at 90% 75%, rgba(7, 89, 233, 0.18), transparent 12rem),
     #fffaf0;
 }
 
+/* Venue, contact and charity cards */
 .venue-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 1.3rem;
+  align-items: stretch;
 }
 
 .venue-card,
-.contact-card {
+.contact-card,
+.charity-card {
   padding: clamp(1.3rem, 3vw, 2rem);
+}
+
+.venue-card h2,
+.contact-card h2,
+.charity-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.charity-card {
+  grid-column: 1 / -1;
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255, 180, 0, 0.35), transparent 28%),
+    #fff;
 }
 
 address {
@@ -549,6 +587,8 @@ address {
   font-weight: 950;
   text-decoration-thickness: 0.16em;
   text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .copy-email {
@@ -644,12 +684,17 @@ summary::marker {
 }
 
 @media (max-width: 980px) {
+
   .hero-grid,
   .games-layout,
   .split-panel,
   .venue-grid,
   .faq-layout {
     grid-template-columns: 1fr;
+  }
+
+  .charity-card {
+    grid-column: auto;
   }
 
   .poster-card {
@@ -707,6 +752,16 @@ summary::marker {
     grid-template-columns: 1fr;
   }
 
+  .quick-facts {
+    gap: 0.75rem;
+  }
+
+  .venue-card h2,
+  .contact-card h2,
+  .charity-card h2 {
+    font-size: clamp(1.8rem, 10vw, 2.6rem);
+  }
+
   .final-cta-inner {
     text-align: center;
     justify-items: center;
@@ -718,6 +773,7 @@ summary::marker {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
