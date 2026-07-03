@@ -530,7 +530,6 @@ details {
   background:
     radial-gradient(circle at 85% 15%, rgba(255, 180, 0, 0.45), transparent 25%),
     #fff;
-  /* transform: rotate(-1deg); */
 }
 
 .cause-card h3 {
