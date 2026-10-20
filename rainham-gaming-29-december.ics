@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rainham Gaming//Gaming Fundraiser//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:game-on-20261229-1100-8fbdfe97
+DTSTAMP:20261019T213149Z
+DTSTART:20261229T110000Z
+DTEND:20261229T170000Z
+SUMMARY:Rainham Gaming! - Gaming Fundraiser
+LOCATION:Location TBC
+DESCRIPTION:Gaming tournaments and activities supporting My Shining Star.\n
+ Tuesday 29 December 2026. 11am-5pm UK time (GMT).\n
+ Wii Sports Bowling / Mario Kart 8 / Street Fighter 2 tournaments.\n
+ Plus 13 games / TCG trading / Beyblade / board games.\n
+ Location to be confirmed. Tournament times and formats TBC.
+END:VEVENT
+END:VCALENDAR

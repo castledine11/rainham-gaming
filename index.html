@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101c18">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Rainham Gaming! — 29 December 2026 · 11am–5pm</title>
+  <meta name="description"
+    content="Choose a console. Load a game. Explore 13 games, three tournaments, trading cards and tabletop fun on Tuesday 29 December 2026, 11am–5pm. Location TBC. Fundraising for My Shining Star.">
+  <meta property="og:title" content="Rainham Gaming! — 29 December 2026">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Three tournaments. Thirteen games. One great cause. 11am–5pm, location TBC.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23101c18'/%3E%3Cpath d='M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z' fill='%23b9eb88'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="consoles.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <svg class="symbol-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="0" height="0">
+    <defs>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="external" viewBox="0 0 24 24">
+        <path d="m6 18 12-12M7 6h11v11" />
+      </symbol>
+      <symbol id="trophy" viewBox="0 0 24 24">
+        <path d="M7 3h10v6a5 5 0 0 1-10 0V3Zm0 2H3v2a4 4 0 0 0 4 4m10-6h4v2a4 4 0 0 1-4 4m-5 3v6m-4 1h8" />
+      </symbol>
+      <symbol id="calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="3" />
+        <path d="M7 3v4m10-4v4M3 11h18m-13 4h3m3 0h2m-8 3h3" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 24 24">
+        <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z" fill="currentColor" stroke="none" />
+      </symbol>
+    </defs>
+  </svg>
+  <header class="header">
+    <div class="wrap topbar"><a class="brand" href="#top"><svg class="icon brand-mark" aria-hidden="true">
+          <use href="#plus" />
+        </svg>Rainham<span>Gaming.</span></a>
+      <nav aria-label="Main navigation"><a href="#games-room">The games room</a><a href="#event">The event</a><a
+          href="#games" class="optional-nav">All games</a><a class="nav-donate" href="#fundraising">Play for good <span
+            aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="games-room" id="games-room" aria-labelledby="hero-title">
+      <div class="wrap hero-intro">
+        <div>
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Tuesday 29 December 2026 · 11am–5pm</p>
+          <h1 id="hero-title">Pick a game.<br><span>Relive the good stuff.</span></h1>
+        </div>
+        <div class="hero-aside">
+          <p>A room full of classics.<br>A day to make new memories.</p><a href="#event">Explore the event <span
+              aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="wrap arcade" id="arcade">
+        <div class="arcade-heading">
+          <p class="eyebrow">The games room <span class="tiny-divider">/</span> 8 consoles. 13 games.</p><span
+            class="room-hint">Choose your console ↓</span>
+        </div>
+        <div class="console-nav" id="console-nav" role="group" aria-label="Choose a console"></div>
+        <div class="station-layout">
+          <div class="station-left">
+            <div class="setup" id="setup">
+              <div class="room-glow" aria-hidden="true"></div>
+              <div class="crt">
+                <div class="crt-screen" id="crt-screen">
+                  <div class="screen-home" id="screen-home">
+                    <div class="screen-grid" aria-hidden="true"></div><span class="screen-channel">AV 01</span><svg
+                      class="screen-mark" viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#plus" />
+                    </svg>
+                    <p>GOOD TIMES.<br>NOW LOADING.</p><small>Choose a game from the shelf</small>
+                  </div>
+                  <div class="screen-loading" id="screen-loading" hidden><span class="screen-channel">AV 01</span><span
+                      class="loading-ring" aria-hidden="true"></span>
+                    <p id="loading-label">Loading game…</p>
+                  </div>
+                  <div class="video-layer" id="video-layer" hidden></div>
+                  <div class="screen-error" id="screen-error" hidden><svg class="icon" aria-hidden="true">
+                      <use href="#play" />
+                    </svg>
+                    <p id="error-message">This preview couldn’t load.</p><a id="screen-watch"
+                      href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Watch on YouTube
+                      ↗</a><button id="retry-video" type="button">Try again</button>
+                  </div>
+                </div>
+                <div class="crt-chin"><span class="monitor-brand">Rainham Gaming <b>colour</b></span>
+                  <div class="monitor-speaker" aria-hidden="true"></div><span class="power-light" id="power-light"
+                    aria-hidden="true"></span><span class="power-knob" aria-hidden="true"></span>
+                </div>
+              </div>
+              <svg class="console-wire" viewBox="0 0 600 120" aria-hidden="true">
+                <path d="M480 2c65 30 22 80-49 66S248 16 264 115" />
+              </svg>
+              <div class="console-bay" id="console-bay">
+                <div id="console-model"></div><span class="slot-target" id="slot-target" aria-hidden="true"></span>
+              </div>
+              <span class="station-name" id="station-name">Super Nintendo</span>
+            </div>
+            <div class="player-controls" aria-label="Preview controls"><span class="playback-status"
+                id="playback-status" role="status" aria-live="polite">Ready when you are</span>
+              <div><button type="button" id="play-toggle" disabled>Pause</button><button type="button" id="sound-toggle"
+                  aria-pressed="false" disabled>Sound off</button><button type="button" id="eject" disabled>Eject
+                  ↑</button></div>
+            </div>
+            <div class="shelf-heading">
+              <p class="eyebrow">Your game shelf</p><span id="shelf-hint">Click a cover to insert it &amp; play</span>
+            </div>
+            <div class="game-shelf" id="game-shelf" role="group" aria-label="Choose a game to load"></div>
+          </div>
+          <aside class="game-info" id="game-info" aria-labelledby="game-title">
+            <div class="info-kicker"><span class="eyebrow" id="game-state">Ready to load</span><span class="edition-tag"
+                id="game-console">SNES</span></div>
+            <div class="info-art"><img id="info-cover" src="assets/covers/super-mario-world.png"
+                alt="Super Mario World box art">
+              <div><span class="big-year" id="game-year">1990</span><span class="year-label">first release on this
+                  console</span></div>
+            </div>
+            <h2 id="game-title">Super Mario World</h2>
+            <p class="featured-badge" id="game-tournament" hidden><svg class="icon" aria-hidden="true">
+                <use href="#trophy" />
+              </svg><span></span></p>
+            <p class="synopsis" id="game-synopsis"></p>
+            <dl class="game-facts">
+              <div>
+                <dt>Developer</dt>
+                <dd id="game-developer">Nintendo EAD</dd>
+              </div>
+              <div>
+                <dt>Publisher</dt>
+                <dd id="game-publisher">Nintendo</dd>
+              </div>
+              <div>
+                <dt>Genre</dt>
+                <dd id="game-genre">Platformer</dd>
+              </div>
+              <div>
+                <dt>Media</dt>
+                <dd id="game-media">Cartridge</dd>
+              </div>
+            </dl>
+            <button class="button insert-button" id="insert-game" type="button"><span>Insert game &amp; play</span><svg
+                class="icon" aria-hidden="true">
+                <use href="#play" />
+              </svg></button>
+            <div class="source-links"><a id="game-source" href="https://en.wikipedia.org/wiki/Super_Mario_World"
+                target="_blank" rel="noopener noreferrer">Game details ↗</a><a id="video-source"
+                href="https://www.youtube.com/watch?v=uy8fUNX0dHo" target="_blank" rel="noopener noreferrer">Full video
+                ↗</a></div>
+            <p class="video-credit" id="video-credit"></p>
+          </aside>
+        </div>
+        <p class="room-note">Gameplay previews stream from YouTube and need an internet connection. Console editions
+          illustrate the games; the event setup is still to be confirmed.</p>
+      </div>
+      <noscript>
+        <div class="wrap no-script">The interactive games room needs JavaScript. You can still explore all the event
+          details below.</div>
+      </noscript>
+      <div class="room-bottom wrap"><span>Good games. Good company.</span><a href="#event">The day, at a glance <span
+            aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="event-section section" id="event" aria-labelledby="event-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Save your spot on the sofa</p>
+            <h2 id="event-title">One day.<br>A whole lot of play.</h2>
+          </div>
+          <p class="section-aside">Arcade classics, friendly competition and tabletop fun. All with a great cause at
+            heart.</p>
+        </div>
+        <div class="event-details">
+          <div><svg class="icon" aria-hidden="true">
+              <use href="#calendar" />
+            </svg>
+            <p><span>The date</span><strong><time datetime="2026-12-29">Tuesday 29 December 2026</time></strong></p>
+          </div>
+          <div><svg class="icon" aria-hidden="true">
+              <use href="#clock" />
+            </svg>
+            <p><span>The time</span><strong><time datetime="11:00">11am</time>–<time
+                  datetime="17:00">5pm</time></strong></p>
+          </div>
+          <div><svg class="icon" aria-hidden="true">
+              <use href="#pin" />
+            </svg>
+            <p><span>The venue</span><strong>Location TBC</strong></p>
+          </div><a class="button button-outline" href="game-on-29-december.ics" download>Add to calendar <span
+              aria-hidden="true">↗</span></a>
+        </div>
+        <div class="tournament-heading">
+          <h3>Three ways to take the crown.</h3><span class="eyebrow">The tournaments</span>
+        </div>
+        <div class="tournament-grid">
+          <article class="tournament-card">
+            <div class="tournament-art art-bowling"><span class="event-number">01</span>
+              <div class="art-orbit"></div><img src="assets/covers/wii-sports.png" alt="Wii Sports box art"
+                loading="lazy"><svg class="icon" aria-hidden="true">
+                <use href="#trophy" />
+              </svg>
+            </div>
+            <div class="tournament-body"><span class="mini-label">Line it up. Let it roll.</span>
+              <h4>Wii Sports Bowling</h4>
+              <p>A steady hand. A perfect line. A little living-room rivalry.</p><button class="load-link" type="button"
+                data-load="wii-sports">Preview the game <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="tournament-card">
+            <div class="tournament-art art-racing"><span class="event-number">02</span>
+              <div class="art-orbit"></div><img src="assets/covers/mario-kart-8.png" alt="Mario Kart 8 Deluxe box art"
+                loading="lazy"><svg class="icon" aria-hidden="true">
+                <use href="#trophy" />
+              </svg>
+            </div>
+            <div class="tournament-body"><span class="mini-label">Make the last lap count.</span>
+              <h4>Mario Kart 8</h4>
+              <p>Big drifts, clever items and a finish worth racing for.</p><button class="load-link" type="button"
+                data-load="mario-kart-8">Preview the game <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="tournament-card">
+            <div class="tournament-art art-fighting"><span class="event-number">03</span>
+              <div class="art-orbit"></div><img src="assets/covers/street-fighter-2.png" alt="Street Fighter 2 box art"
+                loading="lazy"><svg class="icon" aria-hidden="true">
+                <use href="#trophy" />
+              </svg>
+            </div>
+            <div class="tournament-body"><span class="mini-label">Step up to the classic.</span>
+              <h4>Street Fighter 2</h4>
+              <p>Pick your fighter. Dust off your combos. Bring your A-game.</p><button class="load-link" type="button"
+                data-load="street-fighter-2">Preview the game <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="small-note">Tournament start times and formats to be confirmed.</p>
+      </div>
+    </section>
+    <section class="section catalogue" id="games" aria-labelledby="games-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The complete line-up</p>
+            <h2 id="games-title">Find your next favourite.</h2>
+          </div>
+          <p class="section-aside">Browse by genre, then load any game into its console above.</p>
+        </div>
+        <div class="filter-bar">
+          <div class="filters" id="filters" role="group" aria-label="Filter the games"><button type="button"
+              data-filter="all" aria-pressed="true">All games</button><button type="button" data-filter="fighting"
+              aria-pressed="false">Fighting</button><button type="button" data-filter="racing"
+              aria-pressed="false">Racing</button><button type="button" data-filter="arcade" aria-pressed="false">Arcade
+              &amp; action</button><button type="button" data-filter="sports"
+              aria-pressed="false">Sports</button><button type="button" data-filter="tournaments"
+              aria-pressed="false">Tournaments <span aria-hidden="true">★</span></button></div>
+          <p id="game-count" aria-live="polite">13 games</p>
+        </div>
+        <ul class="catalogue-grid" id="catalogue-grid"></ul>
+        <p class="catalogue-legend"><svg class="icon" aria-hidden="true">
+            <use href="#trophy" />
+          </svg>Look for the trophy: these games have a tournament on the day.</p>
+        <noscript>
+          <p>Street Fighter 2 · Super Mario Kart · Super Mario World · Time Crisis · Point Blank · Tekken 4 · GoldenEye
+            · Rocket League · Wii Sports · Mario Kart 8 Deluxe · Mario Kart Double Dash · Super Smash Bros. Melee ·
+            Super Smash Bros. Ultimate</p>
+        </noscript>
+      </div>
+    </section>
+    <section class="section extras" id="extras" aria-labelledby="extras-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Put the controller down. Keep playing.</p>
+            <h2 id="extras-title">Beyond the screen.</h2>
+          </div>
+          <p class="section-aside">Bring your cards, pick a game and make a little room at the table.</p>
+        </div>
+        <div class="extras-grid">
+          <article class="extra-card"><svg class="extra-art" viewBox="0 0 280 160" aria-hidden="true">
+              <defs>
+                <linearGradient id="card-gradient" x2="1" y2="1">
+                  <stop stop-color="#d8caf1" />
+                  <stop offset="1" stop-color="#8a6faa" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="143" cy="141" rx="83" ry="9" fill="#20382b" opacity=".08" />
+              <g transform="rotate(-15 106 77)">
+                <rect x="65" y="14" width="83" height="119" rx="9" fill="#bacdbb" stroke="#8da98f" />
+                <rect x="74" y="24" width="65" height="79" rx="5" fill="#dce9d6" />
+                <path d="m106 40 8 19 21 2-16 14 5 21-18-11-18 11 5-21-16-14 21-2Z" fill="#93b67e" />
+              </g>
+              <g transform="rotate(12 173 83)">
+                <rect x="134" y="23" width="83" height="119" rx="9" fill="url(#card-gradient)" stroke="#9983af" />
+                <rect x="143" y="33" width="65" height="79" rx="5" fill="#c7b4df" />
+                <path d="m175 44 20 29-20 29-20-29Z" fill="#f0e8fa" />
+                <path d="M146 123h48m-48 8h30" stroke="#6d5889" stroke-width="2" />
+              </g>
+            </svg><span class="mini-label">Collect / trade / connect</span>
+            <h3>TCGs &amp; trading</h3>
+            <div class="tcg-tags"><span>Pokémon</span><span>Magic: The Gathering</span></div>
+            <p>Bring your collection and find your next great trade.</p>
+          </article>
+          <article class="extra-card"><svg class="extra-art" viewBox="0 0 280 160" aria-hidden="true">
+              <defs>
+                <linearGradient id="top-gradient" x2="0" y2="1">
+                  <stop stop-color="#c2b5e0" />
+                  <stop offset="1" stop-color="#705995" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="140" cy="127" rx="87" ry="17" fill="none" stroke="#b0c4ad" transform="rotate(-10 140 127)" />
+              <ellipse cx="140" cy="127" rx="65" ry="10" fill="#183c26" opacity=".1" />
+              <g transform="rotate(-10 140 76)">
+                <path d="m111 104 29 38 29-38" fill="#7d649b" />
+                <path d="m76 75 25 37h78l25-37Z" fill="url(#top-gradient)" />
+                <path d="m140 17 23 11 25 2 11 20 15 19-12 21-21 12-24 1-17 12-22-12-24-1-17-17-12-16 17-23 7-18 25-2Z"
+                  fill="#b8d5a8" stroke="#8daa7d" />
+                <ellipse cx="140" cy="65" rx="37" ry="27" fill="#8b77aa" />
+                <ellipse cx="140" cy="65" rx="25" ry="18" fill="#d9cdef" />
+                <path d="m141 46 9 16 18 3-16 11-5 17-12-14-18-2 14-13Z" fill="#f0f4dc" />
+              </g>
+            </svg><span class="mini-label">A different kind of spin</span>
+            <h3>Beyblade</h3>
+            <p>Bring the energy to the arena for big spins and head-to-head battles.</p>
+          </article>
+          <article class="extra-card"><svg class="extra-art" viewBox="0 0 280 160" aria-hidden="true">
+              <ellipse cx="147" cy="141" rx="89" ry="9" fill="#21322b" opacity=".08" />
+              <g transform="rotate(-12 111 91)">
+                <rect x="64" y="51" width="86" height="86" rx="18" fill="#d7c9e7" stroke="#a99abd" />
+                <g fill="#7c6595">
+                  <circle cx="86" cy="73" r="6" />
+                  <circle cx="128" cy="73" r="6" />
+                  <circle cx="107" cy="94" r="6" />
+                  <circle cx="86" cy="115" r="6" />
+                  <circle cx="128" cy="115" r="6" />
+                </g>
+              </g>
+              <path d="M177 70c-21-8-22-37-3-46 19-10 41 10 31 28-4 9-10 15-15 18l19 57h-51Z" fill="#92b892"
+                stroke="#729773" />
+              <ellipse cx="184" cy="129" rx="34" ry="9" fill="#bdd6b0" stroke="#8bb38a" />
+            </svg><span class="mini-label">Roll / move / rematch</span>
+            <h3>Board games</h3>
+            <p>Pull up a chair for some tabletop competition between the digital showdowns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="fundraising" id="fundraising" aria-labelledby="fundraising-title">
+      <div class="wrap charity-inner">
+        <div class="charity-art" aria-hidden="true"><svg viewBox="0 0 280 280">
+            <defs>
+              <linearGradient id="charity-star" x2="1" y2="1">
+                <stop stop-color="#e3f8b8" />
+                <stop offset="1" stop-color="#8fbc71" />
+              </linearGradient>
+            </defs>
+            <circle cx="140" cy="140" r="112" fill="none" stroke="#cab9e7" stroke-opacity=".22" />
+            <ellipse cx="140" cy="140" rx="126" ry="77" fill="none" stroke="#d4c7e9" stroke-opacity=".3"
+              transform="rotate(-27 140 140)" />
+            <path d="m140 44 25 59 63 6-48 41 15 63-55-33-55 33 15-63-48-41 63-6Z" fill="url(#charity-star)"
+              transform="rotate(-8 140 140)" />
+            <circle cx="242" cy="100" r="5" fill="#d0b8ed" />
+            <circle cx="51" cy="215" r="3" fill="#c9eca3" />
+          </svg></div>
+        <div>
+          <p class="eyebrow">A little play. A lot of heart.</p>
+          <h2 id="fundraising-title">Play for<br><span>something bigger.</span></h2>
+          <p>We’re still fundraising for <strong>My Shining Star</strong>, supporting families affected by childhood
+            cancer. Join us for a day of play and help keep their work shining.</p><a class="button"
+            href="https://myshiningstar.co.uk/make-a-donation/" target="_blank" rel="noopener noreferrer">Support My
+            Shining Star <svg class="icon" aria-hidden="true">
+              <use href="#external" />
+            </svg></a><small>Donate directly on the charity’s official website. Opens in a new tab.</small>
+        </div>
+      </div>
+    </section>
+    <div class="wrap last-call">
+      <div>
+        <h2>See you on the 29th.</h2>
+        <p>Tuesday 29 December 2026 · 11am–5pm · Location TBC</p>
+      </div><a class="button button-outline" href="game-on-29-december.ics" download>Save the date <svg class="icon"
+          aria-hidden="true">
+          <use href="#calendar" />
+        </svg></a>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-main"><a class="brand" href="#top">game<span>on.</span></a>
+      <p>Good games. Good company. A great cause.</p><a href="#top">Back to top ↑</a>
+    </div>
+    <div class="wrap footer-small"><span>Game artwork and video belong to their respective owners.</span><a
+        href="credits.html">Game &amp; media credits ↗</a></div>
+  </footer>
+</body>
+
+</html>
